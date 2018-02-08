@@ -1,0 +1,26 @@
+{
+  "name": "go-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit",
+    "build": "jake build",
+    "clean": "jake clean",
+    "deploy": "jake deploy",
+    "destroy": "jake destroy",
+    "test:lint": "eslint .",
+    "test:unit": "mocha"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.177.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.14.0",
+    "jake": "^8.0.15",
+    "mocha": "^4.0.1"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Outputs": {
+    "AwsPartition": {
+      "Value": {
+        "Ref": "AWS::Partition"
+      }
+    },
+    "AwsRegion": {
+      "Value": {
+        "Ref": "AWS::Region"
+      }
+    },
+    "AwsStackId": {
+      "Value": {
+        "Ref": "AWS::StackId"
+      }
+    },
+    "AwsStackName": {
+      "Value": {
+        "Ref": "AWS::StackName"
+      }
+    },
+    "AwsUrlSuffix": {
+      "Value": {
+        "Ref": "AWS::URLSuffix"
+      }
+    }
+  }
+}
