@@ -125,22 +125,23 @@
               "application/json": "Empty"
             },
             "ResponseParameters": {
-              "method.response.header.Access-Control-Allow-Headers": true,
-              "method.response.header.Access-Control-Allow-Methods": true,
-              "method.response.header.Access-Control-Allow-Origin": true
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Content-Type": true
             }
           }
         ],
         "Integration": {
-          "Type": "AWS_PROXY",
+          "Type": "AWS",
           "IntegrationHttpMethod": "POST",
           "IntegrationResponses": [
             {
               "StatusCode": "200",
               "ResponseParameters": {
-                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'",
-                "method.response.header.Access-Control-Allow-Methods": "'*'",
-                "method.response.header.Access-Control-Allow-Origin": "'*'"
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Content-Type": "'application/json'"
+              },
+              "ResponseTemplates": {
+                "application/json": "$util.parseJson($input.json('$.body'))"
               }
             }
           ],
